@@ -1,6 +1,6 @@
 import { ROOMS } from "@/types/booking";
 import { Card } from "@/components/ui/card";
-import { Building2, Users } from "lucide-react";
+import { Building2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface RoomSelectorProps {
@@ -33,11 +33,7 @@ export const RoomSelector = ({ selectedRoomId, onSelectRoom }: RoomSelectorProps
             </div>
             <div className="flex-1">
               <h3 className="font-semibold text-lg mb-1">{room.name}</h3>
-              <p className="text-sm text-muted-foreground mb-2">{room.description}</p>
-              <div className="flex items-center text-sm text-muted-foreground">
-                <Users className="w-4 h-4 mr-1" />
-                <span>Capacity: {room.capacity}</span>
-              </div>
+              <p className="text-sm text-muted-foreground">{room.description}</p>
             </div>
           </div>
         </Card>
